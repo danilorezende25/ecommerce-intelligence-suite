@@ -1,0 +1,7 @@
+google-generativeai
+python-telegram-bot
+sqlalchemy
+psycopg2-binary
+pandas
+tabulate
+python-dotenv

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables (IMPORTANT)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.llm/
+
+# dbt
+target/
+dbt_packages/
+logs/
+profiles.yml
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
