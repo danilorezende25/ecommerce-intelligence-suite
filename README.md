@@ -1,46 +1,108 @@
-# Portfólio de Inteligência de Dados: E-commerce de Ponta a Ponta
+# E-commerce Intelligence Suite: End-to-End Data Engineering & AI 🚀
 
-Este projeto é uma solução completa de inteligência de dados para um e-commerce, abrangendo desde o tratamento de dados brutos até a entrega de insights em tempo real via Dashboard e Inteligência Artificial (Telegram).
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
-Este repositório consolida o conhecimento adquirido no workshop da **Jornada de Dados**, ministrado por **Luciano Galvão**.
-
----
-
-## 🏗️ Arquitetura do Projeto
-
-O projeto é dividido em três módulos principais que se conectam ao **Supabase (PostgreSQL)**:
-
-1.  **01-Pipeline-DBT**: Transformação e modelagem de dados usando a arquitetura Medalhão (Bronze, Silver, Gold).
-2.  **02-Dashboard-Streamlit**: Visualização de KPIs comerciais, performance de clientes e análise de pricing.
-3.  **03-Telegram-Bot-Gemini**: Agente inteligente que responde perguntas sobre o banco de dados e envia relatórios executivos automaticamente.
+Uma solução completa de inteligência de dados para e-commerce, projetada para transformar dados brutos em decisões estratégicas através de um pipeline moderno, dashboards reativos e agentes inteligentes de IA.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 📌 Visão Geral do Projeto
 
-- **Cloud & DB**: Supabase, PostgreSQL.
-- **Engenharia de Dados**: dbt (Data Build Tool), SQL.
-- **Visualização**: Streamlit, Plotly, Pandas.
-- **Inteligência Artificial**: Google Gemini API, Python Telegram Bot.
+Este repositório apresenta um ecossistema de dados resiliente, construído para resolver o desafio clássico de centralizar e processar dados transacionais e de mercado. O projeto abrange desde a **Ingestão Automática** até a camada de **Data Analytics** e **GenAI**, permitindo que gestores acessem métricas vitais via dashboard ou conversação natural.
+
+## 🏗️ Arquitetura da Solução
+
+O projeto segue os princípios do **Modern Data Stack**, utilizando uma **Arquitetura Medalhão** (Bronze, Silver, Gold) para garantir a governança e qualidade dos dados.
+
+```mermaid
+graph LR
+    subgraph "Ingestão & Storage"
+        A[Data Lake / S3] -->|Python/Boto3| B[(Supabase DB)]
+    end
+    
+    subgraph "Transformação (ELT)"
+        B -->|dbt Core| C[Layer: Bronze]
+        C --> D[Layer: Silver]
+        D --> E[Layer: Gold]
+    end
+    
+    subgraph "Entrega de Valor"
+        E --> F[Streamlit Dashboard]
+        E --> G[Gemini Data Agent]
+        G --> H[Telegram Bot]
+    end
+```
 
 ---
 
-## 🚀 Como Executar
+## 📂 Módulos do Repositório
 
-Cada pasta contém seu próprio `README.md` com instruções específicas e um arquivo `requirements.txt`.
+### [01-Pipeline-dbt](./01-pipeline-dbt)
+Transformação de dados utilizando o **dbt Core**. 
+- Implementação da **Arquitetura Medalhão** para desacoplar ingestão de lógica de negócio.
+- **Camada Gold**: Data Marts focados em Vendas, Customer Success e Pricing.
+- Aplicação de **Data Quality Tests** e versionamento de modelos SQL.
 
-> [!NOTE]
-> Por questões de segurança, chaves de API e URLs de conexão não estão inclusas. Você precisará de um arquivo `.env` baseado nos modelos `.env.example`.
+### [02-Dashboard-Streamlit](./02-dashboard-streamlit)
+Camada de visualização interativa construída em **Python**.
+- Dashboards reativos para análise de performance de vendas e pricing competitivo.
+- Implementação de temas dinâmicos (Light/Dark Mode).
+- Foco em **UX/UI** para facilidade de leitura de KPIs executivos.
+
+### [03-Telegram-Bot-Gemini](./03-telegram-bot-gemini)
+Integração de Inteligência Artificial Generativa (**Google Gemini API**).
+- Agente de dados capaz de interpretar perguntas em linguagem natural diretamente no Telegram.
+- Conexão direta com a camada Gold do banco de dados para respostas em tempo real.
+- Notificações e relatórios automatizados.
 
 ---
 
-## 📈 Resultados Obtidos
+## 🛠️ Stack Técnica
 
-- **Arquitetura Escalável**: Dados prontos para análise na camada Gold.
-- **Decisões Baseadas em Dados**: Insights automáticos sobre segmentação de clientes e competitividade de preços.
-- **IA na Prática**: Interface de chat natural para facilitar a consulta aos dados.
+- **Linguagens**: Python, SQL.
+- **Data Warehouse & Cloud**: Supabase (PostgreSQL).
+- **Processamento & Modelagem**: dbt Core, Pandas, SQLAlchemy.
+- **Visualização**: Streamlit, Plotly.
+- **AI & Messaging**: Google Gemini API, Telegram Bot API.
 
 ---
 
-**Contato:**
-[Seu Nome Aqui] - [LinkedIn](https://www.linkedin.com/in/SEU-PERFIL/)
+## 🚀 Como Executar este Projeto
+
+O repositório está organizado para que cada módulo possa ser testado individualmente:
+
+1.  **Pré-requisitos**:
+    - Python 3.10+ instalado.
+    - Uma instância do Supabase (ou Postgres).
+    - API Keys do Gemini e Telegram (para o módulo 03).
+
+2.  **Configuração de Ambiente**:
+    - Clone o repositório.
+    - Crie arquivos `.env` em cada pasta seguindo os modelos `.env.example`.
+    - Instale as dependências: `pip install -r requirements.txt`.
+
+3.  **Execução**:
+    - Siga as instruções específicas nos READMEs de cada módulo.
+
+---
+
+## 🎯 Impacto e Resultados
+
+- **Governança**: Transformação de dados brutos em "Single Source of Truth" via dbt.
+- **Agilidade**: Respostas automáticas de negócio via IA, reduzindo a dependência de queries manuais.
+- **Competitividade**: Monitoramento de pricing versus concorrência em tempo real.
+
+---
+
+### 👤 Autor
+Desenvolvido por **Danilo Rezende** como resultado da imersão técnica na **Jornada de Dados**.
+
+- [LinkedIn](https://www.linkedin.com/in/danilorezende/)
+- [Portfólio GitHub](https://github.com/danilorezende25)
+
+---
+*Este projeto foi desenvolvido utilizando boas práticas de Engenharia de Dados e sob a mentoria de Luciano Galvão.*
