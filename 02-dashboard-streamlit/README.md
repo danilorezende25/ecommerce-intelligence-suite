@@ -10,6 +10,9 @@ O dashboard é dividido em três visões estratégicas:
 2.  **Visão de Clientes**: Segmentação da base em tiers (VIP, Top Tier, Regular) e análise geográfica (UF).
 3.  **Visão de Pricing**: Comparativo em tempo real do nosso preço vs. média da concorrência, com alertas de "Mais Caro que Todos" ou "Oportunidade de Preço".
 
+![Dashboard Vendas](../assets/dashboard_vendas.png)
+![Dashboard Pricing](../assets/dashboard_pricing.png)
+
 ## 🎨 Design e UX
 
 - **Tema Dinâmico**: Suporte nativo a Light/Dark Mode.

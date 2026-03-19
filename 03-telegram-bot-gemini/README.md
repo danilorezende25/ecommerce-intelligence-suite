@@ -13,6 +13,8 @@ Utilizamos a API do **Google Gemini** para atuar como um analista de dados assis
 - **Relatórios On-demand**: Receba métricas rápidas direto no celular.
 - **Automação**: O bot está configurado para interagir com a API do Telegram utilizando a biblioteca `python-telegram-bot`.
 
+![Interação Bot](../assets/telegram_bot.png)
+
 ## 🚀 Como Executar
 
 1.  Acesse a pasta do módulo e instale as dependências.

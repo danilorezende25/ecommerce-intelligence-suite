@@ -39,6 +39,21 @@ graph LR
 
 ---
 
+## 🛠️ Etapas do Pipeline
+
+### 1. Ingestão de Dados (Python & Colab)
+O processo inicia com a extração de arquivos **Parquet** de um Data Lake (S3). Utilizamos Python para automatizar a carga desses dados no **Supabase**, garantindo que as tabelas brutas estejam prontas para a transformação.
+
+> **📸 Visualização do Processo de Ingestão:**
+> ![Python Ingestion](./assets/colab_ingestion.png)
+
+### 2. Transformação e Modelagem (dbt)
+Transformamos dados brutos em inteligência através da Arquitetura Medalhão.
+- **Linhagem de Dados:** Garantia de rastreabilidade completa.
+![dbt Lineage](./assets/dbt_lineage.png)
+
+---
+
 ## 📂 Módulos do Repositório
 
 ### [01-Pipeline-dbt](./01-pipeline-dbt)
@@ -51,13 +66,12 @@ Transformação de dados utilizando o **dbt Core**.
 Camada de visualização interativa construída em **Python**.
 - Dashboards reativos para análise de performance de vendas e pricing competitivo.
 - Implementação de temas dinâmicos (Light/Dark Mode).
-- Foco em **UX/UI** para facilidade de leitura de KPIs executivos.
+![Dashboard Vendas](./assets/dashboard_vendas.png)
 
 ### [03-Telegram-Bot-Gemini](./03-telegram-bot-gemini)
 Integração de Inteligência Artificial Generativa (**Google Gemini API**).
-- Agente de dados capaz de interpretar perguntas em linguagem natural diretamente no Telegram.
-- Conexão direta com a camada Gold do banco de dados para respostas em tempo real.
-- Notificações e relatórios automatizados.
+- Agente de dados disponível no Telegram.
+![Telegram Bot](./assets/telegram_bot.png)
 
 ---
 

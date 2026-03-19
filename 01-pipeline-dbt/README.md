@@ -13,6 +13,8 @@ Implementamos o padrão de medalhão para garantir a qualidade e a linhagem dos 
     - `customer_success`: Segmentação RFM e ranking de clientes.
     - `pricing`: Análise de competitividade vs mercado.
 
+![Lineage Graph](../assets/dbt_lineage.png)
+
 ## 🧪 Qualidade e Governança
 
 - **Data Tests**: Implementamos testes automatizados do dbt (unique, not_null, relationship) para garantir que a Camada Gold nunca receba dados inconsistentes.
