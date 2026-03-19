@@ -101,7 +101,7 @@ O repositório está organizado para que cada módulo possa ser testado individu
 ### 👤 Autor
 Desenvolvido por **Danilo Rezende** como resultado da imersão técnica na **Jornada de Dados**.
 
-- [LinkedIn](https://www.linkedin.com/in/danilorezende/)
+- [LinkedIn](https://www.linkedin.com/in/danilorezend/)
 - [Portfólio GitHub](https://github.com/danilorezende25)
 
 ---
